@@ -1,5 +1,5 @@
 # Python
 
-Atividades básicas 
-Questões do Beecrond 
-Projetos em Python 
+-Atividades básicas 
+  -Questões do Beecrond 
+    -Projetos em Python 
