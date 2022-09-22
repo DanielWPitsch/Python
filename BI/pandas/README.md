@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Python
 =======
 # Resumo traduzido da documentação do pandas
