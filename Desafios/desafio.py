@@ -2,7 +2,7 @@
 Função : Multiplicação de conjuntos
 Autor : Daniel Warella Pitsch
 Data : 17/05/2023
-Observações: Dado n quantidade de listas, recebe a quantidade de possibilidades e as imprime
+Observações: Dado n quantidade de listas, imprime a quantidade de possibilidades e cada possibilidade 
 '''
 
 from math import prod
