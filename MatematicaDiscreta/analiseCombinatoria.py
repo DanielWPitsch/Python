@@ -17,25 +17,29 @@ def main():
 
     #2 e 5.Permutação onde r < n, sem reposição 
     r= 2
-    permutacaoR = fatorial(len(nome)) / (fatorial(len(nome)) - fatorial(r))
-    print("permutação r < n: ", permutacaoR)
+    permutacaoR = fatorial(len(nome)) / fatorial(len(nome) - r)
+    print("permutação r < n (sem reposição): \n", permutacaoR)
 
     #3.Quando os elementos podem se repetir
     # fatorial(elementos) / fatorial(repetido1) * fatorial(repetido2)...
     palavra="banana"
     contador = Counter(palavra)
-    print(contador)
+    #achando fatorial divisor
+    divisor=1
+    for each in contador:
+        if(contador[each] > 1):
+            divisor *= fatorial(contador[each])
+    repetir= fatorial(len(palavra)) / divisor
+    print("\npermutação quando os elementos podem se repetir: \n", repetir)
                    
     #4. Amostra com reposição = n^r
     reposicao = pow(2, 3) #pow(n, r)
-    print("reposicao", reposicao)
+    print("\nAmostra com reposicao: \n", reposicao)
 
     #6 Combinações
     combinacao = list(itertools.combinations(numeros, 2)) 
-    print("combinações: \n", combinacao)
+    print("\nCombinações: \n", combinacao)
     print(len(combinacao), "combinações\n")
-
-    
     
 
 if __name__ == "__main__":
