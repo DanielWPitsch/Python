@@ -21,6 +21,7 @@ class Pilha:
     def desempilha(self):
         if(self.topo >= 0):
             elemento = self.dados[self.topo]
+            self.dados[self.topo] = None
             self.topo -= 1
             return elemento
 
@@ -31,24 +32,24 @@ class Pilha:
         print("Pilha completa", self.dados)
 
 if __name__ == '__main__':
-    esolha =1
+    escolha =1
     
-    tamanho = input(int("Qual o tamanho da pilha? "))
+    tamanho = int(input("Qual o tamanho da pilha? "))
     pilha = Pilha(tamanho)
     
     while(escolha != 0):
-        esolha = input(int("    -Menu-"+ 
+        escolha = int(input("    -Menu-"+ 
                            "\nQual operação deseja fazer na pilha"+
-                           "\n1-Empilha"+
-                           "\n2-Desempilha"+
-                           "\n3-Sair"))
+                           "\n1-Empilhar"+
+                           "\n2-Desempilhar"+
+                           "\n3-Sair\n"))
         if(escolha == 1):
-            entrada = (input("Informe o elemento a ser empilhado: ")
+            entrada = input("Informe o elemento a ser empilhado: ")
             pilha.empilha(entrada)
         elif(escolha == 2):
-            print("O elemento "+desempilha+" foi desempilhado")
-            exibe_pilha()
-        elif(escolha == 0):
+            print("O elemento "+str(pilha.desempilha())+" foi desempilhado!")
+            pilha.exibe_pilha()
+        elif(escolha == 3):
             break
         else:
             print("Opção inválida!")
