@@ -27,15 +27,35 @@ class Grafo:
 g = Grafo()
 
 g.add_aresta(0,1)
-g.add_aresta(1,2)
-g.add_aresta(1,3)
+g.add_aresta(1,0)
+
+g.add_aresta(0,2)
 g.add_aresta(2,0)
-g.add_aresta(3,0)
-g.add_aresta(3,1)
+
+g.add_aresta(1,4)
+g.add_aresta(4,1)
+
+g.add_aresta(2,3)
+g.add_aresta(3,2)
+
+g.add_aresta(2,4)
+g.add_aresta(4,2)
+
+g.add_aresta(3,5)
+g.add_aresta(5,3)
+
 g.add_aresta(4,5)
+g.add_aresta(5,4)
+
 g.add_aresta(4,6)
-g.add_aresta(5,1)
-g.add_aresta(6,3)
+g.add_aresta(6,4)
+
+g.add_aresta(5,7)
+g.add_aresta(7,5)
+
+g.add_aresta(6,7)
+g.add_aresta(7,6)
+
 
 print("Busca profundidade:")
 g.dfs(0)
